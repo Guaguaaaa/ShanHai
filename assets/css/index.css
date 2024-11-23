@@ -1,0 +1,173 @@
+.navbar {
+    /*background-color: transparent;*/
+    border-bottom: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between; /* 两端对齐 */
+    align-items: center; /* 垂直居中 */
+
+    background-color: rgba(248, 249, 250, 0.7);
+}
+
+.navbar .navbar-nav {
+    margin-right: auto; /* 使导航菜单靠左 */
+}
+
+.navbar .navbar-text {
+    margin-left: auto; /* 使邮箱地址靠右 */
+    margin-right: 100px; /* 添加右边距 */
+}
+
+.navbar-brand img {
+    height: 25px; /* 设置 logo 图片的高度 */
+    margin-left: 50px;
+}
+
+.navbar .navbar-text a { /* 针对邮箱链接 */
+    color: #5d5d5d; /* 设置默认颜色为灰色 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+.navbar .navbar-text a:hover { /* 鼠标悬停时的样式 */
+    color: #000000; /* 改变颜色为黑色或其他颜色 */
+    text-decoration: none; /* 取消下划线 */
+}
+
+@media screen and (max-width: 922px){
+    .navbar-brand img{
+        margin-left: auto;
+    }
+}
+
+
+/*webpage style*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /*background-color: #f7f7f7;*/
+    display: flex; /* 将 body 设置为 Flex 容器 */
+    flex-direction: column; /* 设置垂直排列 */
+    min-height: 100vh; /* 确保 body 至少占据整个屏幕高度 */
+    justify-content: space-between; /* 使导航栏和页脚分别位于顶部和底部 */
+    align-items: center; /* 水平居中内容 */
+
+    margin: 0;
+    padding-bottom: 100px;
+    background-image: url("../images/home_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.content {
+    width: 100%; /* 或者设置你想要的宽度 */
+    max-width: 1200px; /* 可选：设置最大宽度 */
+    flex-grow: 1; /* 允许 content div 占据剩余空间 */
+    display: flex; /* 将 content div 设置为 Flex 容器 */
+    flex-direction: column; /* 设置 content div 内部元素垂直排列 */
+    /*align-items: center; /* 水平居中 content div 内部的元素 */
+    justify-content: center; /* 垂直居中 content div 内部的元素 */
+    /*color: #000;*/
+}
+
+.container{
+    color: #222; /* 深蓝色文字 */
+    /*background: linear-gradient(to bottom, rgba(224, 242, 247, 0.1), rgba(77, 182, 172, 0.8));*/
+    background: linear-gradient(to bottom,
+    rgba(224, 242, 247, 0.2) 0%,
+    rgba(77, 182, 172, 0.9) 30%,
+    rgba(77, 182, 172, 0.9) 70%,
+    rgba(224, 242, 247, 0.2) 100%);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.page-title {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 20px; }
+@media screen and (max-width: 767px) and (min-width: 451px){
+    .page-title {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+}
+@media screen and (max-width: 450px){
+    .page-title {
+        font-size: 20px;
+        margin-bottom: 14px;
+    }
+}
+
+.page-description {
+    /*max-width: 465px;*/
+    font-size: 18px;
+    /*margin-bottom: 59px; */
+}
+@media screen and (max-width: 767px) and (min-width: 451px){
+    .page-description {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 450px){
+    .page-description {
+        font-size: 12px;
+    }
+}
+
+
+p {
+    font-size: 14px;
+    margin-bottom: 21px; }
+
+
+
+/* Footer section */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px; /* Adjust according to footer height */
+
+    background-color: rgba(248, 249, 250, 0.2); /* Background color for the footer */
+    padding: 20px 0; /* Padding top and bottom */
+    text-align: center; /* Align text to the center */
+}
+
+.footer-content {
+    max-width: 1200px; /* Maximum width for the content */
+    margin: 0 auto; /* Center the content horizontally */
+}
+
+.footer p {
+    margin-bottom: 10px; /* Add some space below the paragraph */
+}
+
+.social-icons {
+    font-size: 24px; /* Size of the social media icons */
+}
+
+.social-icon {
+    display: inline-block; /* Display icons inline */
+    margin: 0 10px; /* Add some space between icons */
+    color: #333; /* Color of the icons */
+}
+
+.social-icon:nth-child(1):hover{
+    color: #e4405f;
+}
+.social-icon:nth-child(2):hover{
+    color: #0077B5;
+}
+.social-icon:nth-child(3):hover{
+    color: #181717;
+}
+.social-icon:nth-child(4):hover{
+    color: #5865F2;
+}
